@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public class UserRepositoryImpl implements UserRepository{
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     @Override
     public User save(User user) {

@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public class MailRepositoryImpl implements MailRepository{
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     @Override
     public Mail save(Mail mail) {

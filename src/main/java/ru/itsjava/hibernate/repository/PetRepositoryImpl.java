@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public class PetRepositoryImpl implements PetRepository {
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     @Override
     public Pet save(Pet pet) {

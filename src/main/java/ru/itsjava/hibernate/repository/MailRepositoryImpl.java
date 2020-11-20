@@ -5,7 +5,6 @@ import ru.itsjava.hibernate.model.Mail;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Repository

@@ -20,14 +20,8 @@ public class HibernateApplication {
 		Pet pet = new Pet(0l,"Cat", "Musya");
 		User user = new User(0l, "Alex", 27, mail, pet);
 		UserService userService = context.getBean(UserServiceImpl.class);
-		MailService mailService = context.getBean(MailServiceImpl.class);
-		PetService petService = context.getBean(PetServiceImpl.class);
 		userService.createUser(user);
 		userService.printById(1l);
-		userService.updateUser(user, 30 );
-		mailService.updateMail(mail, "alexS@mail.ru");
-		petService.updatePet(pet, "Kuzya", "KOT");
-		userService.deleteUser(user);
 		Console.main(args);
 	}
 

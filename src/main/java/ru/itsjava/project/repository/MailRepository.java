@@ -1,6 +1,6 @@
-package ru.itsjava.project.services.repository;
+package ru.itsjava.project.repository;
 
-import ru.itsjava.project.services.model.Mail;
+import ru.itsjava.project.model.Mail;
 
 import java.util.Optional;
 

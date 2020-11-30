@@ -1,6 +1,6 @@
-package ru.itsjava.project.services.repository;
+package ru.itsjava.project.repository;
 
-import ru.itsjava.project.services.model.User;
+import ru.itsjava.project.model.User;
 
 import java.util.List;
 import java.util.Optional;

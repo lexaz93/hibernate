@@ -1,4 +1,4 @@
-package ru.itsjava.project.services.model;
+package ru.itsjava.project.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

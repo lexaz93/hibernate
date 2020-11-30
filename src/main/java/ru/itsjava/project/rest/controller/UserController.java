@@ -1,4 +1,4 @@
-package ru.itsjava.project.services.rest.controller;
+package ru.itsjava.project.rest.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import ru.itsjava.project.services.rest.controller.UserDto.UserDto;
-import ru.itsjava.project.services.services.UserService;
+import ru.itsjava.project.rest.controller.UserDto.UserDto;
+import ru.itsjava.project.services.UserService;
 
 @Controller
 @AllArgsConstructor

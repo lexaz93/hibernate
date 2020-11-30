@@ -1,8 +1,8 @@
-package ru.itsjava.project.services.rest.controller.UserDto;
+package ru.itsjava.project.rest.controller.UserDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import ru.itsjava.project.services.model.User;
+import ru.itsjava.project.model.User;
 
 @Data
 @AllArgsConstructor

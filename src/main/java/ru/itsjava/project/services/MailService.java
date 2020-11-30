@@ -1,6 +1,6 @@
-package ru.itsjava.project.services.services;
+package ru.itsjava.project.services;
 
-import ru.itsjava.project.services.model.Mail;
+import ru.itsjava.project.model.Mail;
 
 public interface MailService {
     void printById(long id);

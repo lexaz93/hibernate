@@ -1,7 +1,7 @@
-package ru.itsjava.project.services.repository;
+package ru.itsjava.project.repository;
 
 import org.springframework.stereotype.Repository;
-import ru.itsjava.project.services.model.Mail;
+import ru.itsjava.project.model.Mail;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

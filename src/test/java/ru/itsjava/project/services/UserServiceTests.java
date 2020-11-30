@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
-import ru.itsjava.project.services.model.Mail;
-import ru.itsjava.project.services.model.Pet;
-import ru.itsjava.project.services.model.User;
-import ru.itsjava.project.services.repository.UserRepositoryImpl;
-import ru.itsjava.project.services.services.UserService;
-import ru.itsjava.project.services.services.UserServiceImpl;
+import ru.itsjava.project.model.Mail;
+import ru.itsjava.project.model.Pet;
+import ru.itsjava.project.model.User;
+import ru.itsjava.project.repository.UserRepositoryImpl;
+import ru.itsjava.project.services.UserService;
+import ru.itsjava.project.services.UserServiceImpl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

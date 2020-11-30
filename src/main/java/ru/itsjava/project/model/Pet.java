@@ -1,4 +1,4 @@
-package ru.itsjava.project.services.model;
+package ru.itsjava.project.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,10 +10,12 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Mail {
+public class Pet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String email;
+    private String typePet;
+
+    private String petName;
 }

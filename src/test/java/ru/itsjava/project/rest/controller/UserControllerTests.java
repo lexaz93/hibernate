@@ -8,10 +8,9 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.web.servlet.MockMvc;
-import ru.itsjava.project.services.repository.UserRepository;
-import ru.itsjava.project.services.rest.controller.UserController;
-import ru.itsjava.project.services.services.UserService;
-import ru.itsjava.project.services.services.UserServiceImpl;
+import ru.itsjava.project.repository.UserRepository;
+import ru.itsjava.project.services.UserService;
+import ru.itsjava.project.services.UserServiceImpl;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;

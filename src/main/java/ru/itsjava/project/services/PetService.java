@@ -1,6 +1,6 @@
-package ru.itsjava.project.services.services;
+package ru.itsjava.project.services;
 
-import ru.itsjava.project.services.model.Pet;
+import ru.itsjava.project.model.Pet;
 
 public interface PetService {
     void printById(long id);

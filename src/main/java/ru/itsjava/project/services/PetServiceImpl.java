@@ -1,10 +1,10 @@
-package ru.itsjava.project.services.services;
+package ru.itsjava.project.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.itsjava.project.services.model.Pet;
-import ru.itsjava.project.services.repository.PetRepository;
+import ru.itsjava.project.model.Pet;
+import ru.itsjava.project.repository.PetRepository;
 
 @AllArgsConstructor
 @Service

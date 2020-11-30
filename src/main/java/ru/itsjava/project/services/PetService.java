@@ -1,6 +1,6 @@
-package ru.itsjava.hibernate.services;
+package ru.itsjava.project.services;
 
-import ru.itsjava.hibernate.model.Pet;
+import ru.itsjava.project.model.Pet;
 
 public interface PetService {
     void printById(long id);

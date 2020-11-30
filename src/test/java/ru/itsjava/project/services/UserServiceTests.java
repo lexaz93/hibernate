@@ -1,15 +1,16 @@
-package ru.itsjava.hibernate;
+package ru.itsjava.project.services;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
-import ru.itsjava.hibernate.model.Mail;
-import ru.itsjava.hibernate.model.Pet;
-import ru.itsjava.hibernate.model.User;
-import ru.itsjava.hibernate.repository.UserRepository;
-import ru.itsjava.hibernate.repository.UserRepositoryImpl;
+import ru.itsjava.project.model.Mail;
+import ru.itsjava.project.model.Pet;
+import ru.itsjava.project.model.User;
+import ru.itsjava.project.repository.UserRepositoryImpl;
+import ru.itsjava.project.services.UserService;
+import ru.itsjava.project.services.UserServiceImpl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -18,17 +19,17 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("UserRepository have:")
-@Import(UserRepositoryImpl.class)
+@DisplayName("UserService have:")
+@Import({UserServiceImpl.class, UserRepositoryImpl.class})
 @DataJpaTest
-class HibernateApplicationTests {
+class UserServiceTests {
     @PersistenceContext
     EntityManager entityManager;
 
     @Autowired
-    UserRepository userRepository;
+    UserService userService;
 
-    @DisplayName("correct method getById();")
+    @DisplayName("correct method findById();")
     @Test
     public void sholdCorrectFindById() {
         Mail mail = new Mail(0l, "alex@mail.ru");
@@ -37,7 +38,7 @@ class HibernateApplicationTests {
         entityManager.persist(user);
 
         assertNotEquals(0L, user.getId());
-        assertEquals(Optional.of(user), userRepository.getById(user.getId()));
+        assertEquals(Optional.of(user), userService.findById(user.getId()));
     }
 
     @DisplayName("correct method save();")
@@ -46,9 +47,9 @@ class HibernateApplicationTests {
         Mail mail = new Mail(0l, "alex@mail.ru");
         Pet pet = new Pet(0l,"Cat", "Musya");
         User user = new User(0l, "Alex", 27, mail, pet);
-        userRepository.save(user);
+        userService.save(user);
 
-        assertEquals(Optional.of(user), userRepository.getById(user.getId()));
+        assertEquals(Optional.of(user), userService.findById(user.getId()));
     }
 
     @DisplayName("correct method updateUser();")
@@ -57,22 +58,22 @@ class HibernateApplicationTests {
         Mail mail = new Mail(0l, "alex@mail.ru");
         Pet pet = new Pet(0l,"Cat", "Musya");
         User user = new User(0l, "Alex", 27, mail, pet);
-        userRepository.save(user);
+        userService.save(user);
+        userService.updateUser(user, 30);
         user.setAge(30);
-        userRepository.updateUser(user);
 
-        assertEquals(Optional.of(user), userRepository.getById(user.getId()));
+        assertEquals(Optional.of(user), userService.findById(user.getId()));
     }
 
-    @DisplayName("correct method deleteById();")
+    @DisplayName("correct method delete();")
     @Test
     public void sholdCorrectDeleteById() {
         Mail mail = new Mail(0l, "alex@mail.ru");
         Pet pet = new Pet(0l,"Cat", "Musya");
         User user = new User(0l, "Alex", 27, mail, pet);
-        userRepository.save(user);
-        userRepository.deleteById(user.getId());
+        userService.save(user);
+        userService.deleteUser(user);
 
-        assertEquals(Optional.empty(), userRepository.getById(user.getId()));
+        assertEquals(Optional.empty(), userService.findById(user.getId()));
     }
 }

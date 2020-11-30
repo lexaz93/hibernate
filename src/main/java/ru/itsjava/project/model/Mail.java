@@ -1,4 +1,4 @@
-package ru.itsjava.hibernate.model;
+package ru.itsjava.project.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,12 +10,10 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Pet {
+public class Mail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String typePet;
-
-    private String petName;
+    private String email;
 }

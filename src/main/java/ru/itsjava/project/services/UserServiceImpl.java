@@ -1,12 +1,13 @@
-package ru.itsjava.hibernate.services;
+package ru.itsjava.project.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.itsjava.hibernate.model.User;
-import ru.itsjava.hibernate.repository.UserRepository;
+import ru.itsjava.project.repository.UserRepository;
+import ru.itsjava.project.model.User;
 
 import java.util.List;
+import java.util.Optional;
 
 @AllArgsConstructor
 @Service
@@ -33,8 +34,8 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(readOnly = true)
     @Override
-    public User findById(long id) {
-        return userRepository.getById(id).get();
+    public Optional<User> findById(long id) {
+        return userRepository.getById(id);
     }
 
     @Transactional

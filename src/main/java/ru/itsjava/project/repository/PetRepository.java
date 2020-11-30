@@ -1,6 +1,6 @@
-package ru.itsjava.hibernate.repository;
+package ru.itsjava.project.repository;
 
-import ru.itsjava.hibernate.model.Pet;
+import ru.itsjava.project.model.Pet;
 
 import java.util.Optional;
 

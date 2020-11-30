@@ -1,4 +1,4 @@
-package ru.itsjava.hibernate.rest.controller;
+package ru.itsjava.project.rest.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import ru.itsjava.hibernate.rest.controller.UserDto.UserDto;
-import ru.itsjava.hibernate.services.UserService;
+import ru.itsjava.project.rest.controller.UserDto.UserDto;
+import ru.itsjava.project.services.UserService;
 
 @Controller
 @AllArgsConstructor
@@ -25,7 +25,7 @@ public class UserController {
 
     @GetMapping("/users/{id}/edit")
     public String editUser(@PathVariable("id") String id, Model model) {
-        UserDto dto = UserDto.toDto(userService.findById(Long.parseLong(id)));
+        UserDto dto = UserDto.toDto(userService.findById(Long.parseLong(id)).get());
         model.addAttribute("userDto", dto);
         return "users-edit";
     }

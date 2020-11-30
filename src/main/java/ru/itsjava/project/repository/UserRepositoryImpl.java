@@ -1,7 +1,7 @@
-package ru.itsjava.hibernate.repository;
+package ru.itsjava.project.repository;
 
 import org.springframework.stereotype.Repository;
-import ru.itsjava.hibernate.model.User;
+import ru.itsjava.project.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

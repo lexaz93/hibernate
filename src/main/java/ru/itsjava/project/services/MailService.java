@@ -1,6 +1,6 @@
-package ru.itsjava.hibernate.services;
+package ru.itsjava.project.services;
 
-import ru.itsjava.hibernate.model.Mail;
+import ru.itsjava.project.model.Mail;
 
 public interface MailService {
     void printById(long id);

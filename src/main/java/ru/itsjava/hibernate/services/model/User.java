@@ -1,4 +1,4 @@
-package ru.itsjava.hibernate.model;
+package ru.itsjava.hibernate.services.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

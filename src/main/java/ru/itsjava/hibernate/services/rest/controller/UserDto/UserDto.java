@@ -1,8 +1,8 @@
-package ru.itsjava.hibernate.rest.controller.UserDto;
+package ru.itsjava.hibernate.services.rest.controller.UserDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import ru.itsjava.hibernate.model.User;
+import ru.itsjava.hibernate.services.model.User;
 
 @Data
 @AllArgsConstructor

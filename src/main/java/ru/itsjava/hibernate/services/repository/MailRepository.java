@@ -1,6 +1,6 @@
-package ru.itsjava.hibernate.repository;
+package ru.itsjava.hibernate.services.repository;
 
-import ru.itsjava.hibernate.model.Mail;
+import ru.itsjava.hibernate.services.model.Mail;
 
 import java.util.Optional;
 

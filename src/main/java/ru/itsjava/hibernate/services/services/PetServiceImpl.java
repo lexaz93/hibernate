@@ -1,10 +1,10 @@
-package ru.itsjava.hibernate.services;
+package ru.itsjava.hibernate.services.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.itsjava.hibernate.model.Pet;
-import ru.itsjava.hibernate.repository.PetRepository;
+import ru.itsjava.hibernate.services.model.Pet;
+import ru.itsjava.hibernate.services.repository.PetRepository;
 
 @AllArgsConstructor
 @Service

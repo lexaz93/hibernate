@@ -1,6 +1,6 @@
-package ru.itsjava.hibernate.repository;
+package ru.itsjava.hibernate.services.repository;
 
-import ru.itsjava.hibernate.model.User;
+import ru.itsjava.hibernate.services.model.User;
 
 import java.util.List;
 import java.util.Optional;

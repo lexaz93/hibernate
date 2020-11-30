@@ -1,10 +1,10 @@
-package ru.itsjava.hibernate.services;
+package ru.itsjava.hibernate.services.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.itsjava.hibernate.model.Mail;
-import ru.itsjava.hibernate.repository.MailRepository;
+import ru.itsjava.hibernate.services.model.Mail;
+import ru.itsjava.hibernate.services.repository.MailRepository;
 
 @AllArgsConstructor
 @Service

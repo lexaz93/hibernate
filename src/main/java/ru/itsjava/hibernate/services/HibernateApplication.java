@@ -1,12 +1,13 @@
-package ru.itsjava.hibernate;
+package ru.itsjava.hibernate.services;
 
 import org.h2.tools.Console;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import ru.itsjava.hibernate.model.Mail;
-import ru.itsjava.hibernate.model.Pet;
-import ru.itsjava.hibernate.model.User;
-import ru.itsjava.hibernate.services.*;
+import ru.itsjava.hibernate.services.model.Mail;
+import ru.itsjava.hibernate.services.model.Pet;
+import ru.itsjava.hibernate.services.model.User;
+import ru.itsjava.hibernate.services.services.UserService;
+import ru.itsjava.hibernate.services.services.UserServiceImpl;
 
 import java.sql.SQLException;
 

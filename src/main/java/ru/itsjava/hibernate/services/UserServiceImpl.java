@@ -6,10 +6,24 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.itsjava.hibernate.model.User;
 import ru.itsjava.hibernate.repository.UserRepository;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<User> findAll() {
+        return userRepository.getAll();
+    }
+
+    @Transactional
+    @Override
+    public void save(User user) {
+        userRepository.save(user);
+    }
 
     @Transactional
     @Override
@@ -19,8 +33,8 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(readOnly = true)
     @Override
-    public void printById(long id) {
-        System.out.println(userRepository.getById(id));
+    public User findById(long id) {
+        return userRepository.getById(id).get();
     }
 
     @Transactional

@@ -19,6 +19,12 @@ public class User {
 
     private int age;
 
+    public User(long id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
     @OneToOne(targetEntity = Mail.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "email_id")
     private Mail email;

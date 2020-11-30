@@ -21,7 +21,6 @@ public class HibernateApplication {
 		User user = new User(0l, "Alex", 27, mail, pet);
 		UserService userService = context.getBean(UserServiceImpl.class);
 		userService.createUser(user);
-		userService.printById(1l);
 		Console.main(args);
 	}
 

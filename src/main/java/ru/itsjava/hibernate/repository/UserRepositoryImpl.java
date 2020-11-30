@@ -5,18 +5,27 @@ import ru.itsjava.hibernate.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class UserRepositoryImpl implements UserRepository{
+public class UserRepositoryImpl implements UserRepository {
     @PersistenceContext
     private EntityManager entityManager;
+
+    @Override
+    public List<User> getAll() {
+        TypedQuery<User> query = entityManager.createQuery("select u " +
+                "from User u", User.class);
+        return query.getResultList();
+    }
 
     @Override
     public User save(User user) {
         if (user.getId() == 0L) {
             entityManager.persist(user);
-            return  user;
+            return user;
         }
         return entityManager.merge(user);
     }

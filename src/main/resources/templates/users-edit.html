@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Edit user</title>
+
 </head>
 <body>
 
@@ -23,6 +24,21 @@
     <div class="row">
         <label for="authors-input">Age:</label>
         <input id="authors-input" name="age" type="text" th:value="${userDto.age}" value="15"/>
+    </div>
+
+    <div class="row">
+        <label for="mails-input">Mail:</label>
+        <input id="mails-input" name="mail" type="text" th:value="${userDto.mail}" value="@mail.ru"/>
+    </div>
+
+    <div class="row">
+        <label for="typepets-input">TypePet:</label>
+        <input id="typepets-input" name="typePet" type="text" th:value="${userDto.typePet}" value="Rat"/>
+    </div>
+
+    <div class="row">
+        <label for="pets-input">Pet:</label>
+        <input id="pets-input" name="pet" type="text" th:value="${userDto.pet}" value="Doris"/>
     </div>
 
     <div class="row">
